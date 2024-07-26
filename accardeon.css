@@ -1,0 +1,70 @@
+.accardion {
+    max-width: 880px;
+    margin: 0 auto;
+}
+.accardion-block {
+    margin-bottom: 7px;
+    display: block;
+}
+.accardion-block:last-child {
+    margin-bottom: 0;
+}
+.accardion-link {
+    position: relative;
+}
+
+.accardion-link a {
+    display: block;
+    padding: 20px;
+    color: rgb(36, 36, 36);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration: none;
+}
+
+.accardion-link a:after {
+    content: url(content/+.svg);
+    position: absolute;
+    right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.accardion-link.active a:after {
+    transform: rotate(45deg);
+}
+
+.accardion-lists {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+     -moz-transition: all 0.5s;
+     -o-transition: all 0.5s;
+     transition: all 0.5s;
+     opacity: 0;
+}
+
+.accardion-lists p {
+  padding: 20px;
+  color: rgba(36, 36, 36, 0.5);
+  font-family: "Intro Book", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.active-block {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.line1{
+    max-width: 840px;
+    border: 1px solid rgb(36, 36, 36);
+    margin: 0 auto;
+}

@@ -1,0 +1,1708 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body input:hover{
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: 'Intro-book';
+    src: url('fonts/intro-book.otf');
+}
+
+@font-face {
+    font-family: 'Intro';
+    src: url('fonts/ofont.ru_Intro.ttf');
+}
+
+@font-face {
+    font-family: 'Intro-regular';
+    src: url('fonts/intro_regular.ttf');
+}
+
+.burger-menu{
+    display: none;
+}
+
+header{
+    background: rgb(72, 66, 131);
+}
+
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sneakers2{
+    display: none !important;
+    opacity: 0;
+}
+
+.sneakers2.show {
+    display: inline-block !important;
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 20px;
+    background: rgb(72, 66, 131);
+    position: fixed;
+    width: 100%;
+    z-index: 111;
+    margin: 0 auto;
+}
+
+.headerpad{
+    padding-bottom: 100px;
+}
+
+.header h3{
+    color: rgb(255, 255, 255);
+    font-family: "Intro", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-bottom: 20px;
+    padding-left: 50px;
+}
+
+.par{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    position: relative;
+    top: -9px; 
+}
+
+.par p a, .par p{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Book", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration: none;
+}
+
+.par p .cart-img img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    bottom: 2px;
+    gap: 7px;
+}
+
+.headerund{
+    padding-bottom: 100px;
+}
+
+.headerund h3{
+    color: rgb(255, 255, 255);
+    font-family: "Intro", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.headerund p{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.hub{
+    border-radius: 4px;
+    background: rgb(241, 79, 79);
+    padding: 22px 47px 22px 47px;
+    color: rgb(255, 255, 255);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    border: 0;
+    z-index: 1;
+    position: relative;
+}
+
+.container h1{
+    color: rgba(255, 255, 255, 0.12);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 200px;
+    font-weight: 700;
+    line-height: 200px;
+    letter-spacing: 0%;
+    text-align: left;
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.h3{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.filters{
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 244, 238);
+    border-radius: 4px;
+    background: rgb(255, 244, 238);
+    padding: 20px 20px 20px 20px;
+    height: 617px;
+    width: 280px;
+}
+
+.filters h3{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-top: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+.filters p{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+.inputs-fil{
+    display: flex;
+    flex-direction: row;
+}
+
+.inputs-fil input{
+    border: 1px solid rgb(178, 181, 187);
+    max-width: 50px;
+    /*padding: 17px 42px 17px 42px;*/
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 22px;
+    background: rgb(255, 244, 238);
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    max-width: 95px;
+}
+
+.inputs-fil input:first-child{
+    border-right: 0;
+}
+
+.inputs-fil input:last-child{
+    border-left: 0;
+}
+
+.catalog{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 60px;
+}
+
+.catalog p{
+    padding-bottom: 10px;
+}
+
+.checkbox-custom{
+    opacity: 0;
+    position: absolute;   
+}
+
+.checkbox-custom, .checkbox-custom-label{
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.checkbox-custom-label {
+    position: relative;
+}
+
+.checkbox-custom + .checkbox-custom-label:before {
+    content: '';
+    border: 1px solid rgb(219, 187, 169);
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    content: "\f00c";
+    background-image: url(content/Group.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.checkbox-custom:focus + .checkbox-custom-label{
+  outline: 1px solid #ddd;
+}
+
+.gen{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.checkbox-custom-label{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.size{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.lastsize{
+    padding-bottom: 20px;
+}
+
+.num-of-size{
+    box-sizing: border-box;
+    border: 1px solid rgb(219, 187, 169);
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    padding: 22px;
+    width: 78px;
+}
+
+.btn-dark{
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 244, 238);
+    border-radius: 4px;
+    background: rgb(68, 75, 88);
+    padding-top: 22px;
+    padding-bottom: 22px;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    width: 100%;
+}
+
+.reset{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.name{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.price{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+/*.sneakers-tab{
+    display: inline-block;
+    vertical-align: top;
+}*/
+
+.sneakers-tab {
+    display: flex;
+    flex-wrap: wrap;
+    height: 349px;
+}
+
+/*.sneakers{
+    max-width: 880px;
+}*/
+.sneakers {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 880px;
+}
+
+.lays{
+    position: absolute;
+    width: 280px;
+    height: 293px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.6);
+    display: none;
+    left: 0;
+    top: 0;
+}
+
+.hov-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.hov-btn img{
+    width: 80px;
+    height: 80px;
+}
+
+.sneaker{
+    position: relative;
+    width: 280px;
+    height: 349px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sneaker:hover .lays{
+    display: flex;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-cont {
+    background: rgb(255, 255, 255);
+    max-width: 1140px;
+    max-height: 1313px;
+    top: 10%;
+    left: 5%;
+    position: absolute;
+    padding: 40px;
+}
+
+.modal-cart {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+.modal-cont-cart {
+    background: rgb(255, 255, 255);
+    margin: 15% auto;
+    width: 480px;
+    max-height: 414px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-cart1{
+    padding: 20px;
+    height: 277px;
+    overflow-y: auto;
+}
+
+.cart-img{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: -30px;
+}
+
+.order{
+    padding: 40px;
+    background: rgb(255, 255, 255);
+    width: 580px;
+    margin: 15% auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.order-first{
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-first h3{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+.order-first p{
+    color: rgb(178, 181, 187);
+    font-family: "Intro Book", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: right;
+}
+
+.order-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-inputs input{
+    padding: 20px;
+    border-radius: 4px;
+    border: none;
+    background: rgb(247, 247, 247);
+}
+
+.order-cart{
+    box-sizing: border-box;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 4px;
+    overflow-y: auto;
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 433px;
+}
+
+.order-cart div{
+    color: rgb(178, 181, 187);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.order-cart div span{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.order-input{
+    border-radius: 4px;
+    border: none;
+    background: rgb(241, 79, 79);
+    padding: 22px 47px 22px 47px;
+    color: rgb(255, 255, 255);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    width: 221px;
+}
+
+.circle {
+    width: 16px;
+    height: 16px;
+    background: rgb(241, 79, 79);
+    border-radius: 50%;
+    position: relative;
+    display: none;
+    color: rgb(255, 255, 255);
+    font-family: "Intro Book", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.row-cart1 p{
+    color: rgb(77, 77, 77);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.product{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.product-name h3{
+    color: rgb(77, 77, 77);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.product-name p{
+    color: rgb(77, 77, 77);
+    font-family: "Intro Book", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.product-trash{
+    margin-top: 30px;
+}
+
+.img-product{
+    width: 100px;
+    height: 100px;
+}
+
+.img-product img{
+    width: 100px;
+    height: 57px;
+    position: relative;
+    padding-top: 15px;
+}
+
+.total-row2{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px -4px 10px 0px rgba(0, 13, 84, 0.1);
+}
+
+.price-total p{
+    color: rgb(77, 77, 77);
+    font-family: "Intro Book", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.price-total h3{
+    color: rgb(77, 77, 77);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.btn-total input{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding: 22px 47px 22px 47px;
+    border-radius: 4px;
+    border: none;
+    background: rgb(241, 79, 79);
+}
+
+.colllumn{
+    max-width: 1140px;
+    max-height: 1313px;
+}
+
+.roow{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.roow1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.div4{
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.div4 h3{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.div4 p{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.div5 ul{
+    list-style: none;
+}
+
+.div5 ul li{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.div5 h3{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.div5{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-sn{
+    width: 520px;
+    height: 460px;
+    background-image: url(content/867bca0039568c805d55cbfde9f23808\ 17.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div1{
+    width: 520px;
+}
+
+.div2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.images-sn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.first-about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.first-about .art, .first-about .nal{
+    color: rgb(178, 181, 187);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.first-about .nal span{
+    color: rgb(68, 75, 88);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.second-name{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.catalog-input{
+    border-radius: 4px;
+    background: rgb(241, 79, 79);
+    padding: 22px 47px 22px 47px;
+    margin: 0 auto;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    position: relative;
+    left: 53%;
+}
+
+.fourth-choise{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.fifth-size{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.third-stars img{
+    height: 20px;
+}
+
+.fifth-size input{
+    box-sizing: border-box;
+    border: 1px solid rgb(178, 181, 187);
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    padding: 10px 26px 10px 26px;
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.sixth-price{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.sixth-price p{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.sixth-price span{
+    color: rgb(178, 181, 187);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.seventh-btn input{
+    border-radius: 4px;
+    border: none;
+    background: rgb(241, 79, 79);
+    padding: 22px 180px 22px 180px;
+    color: rgb(255, 255, 255);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.eight-ul ul{
+    list-style: none;
+}
+
+.eight-ul ul li{
+    color: rgb(178, 181, 187);
+    font-family: "Intro Book", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.eight-ul ul li img{
+    width: 14px;
+    height: 15px;
+}
+
+.about{
+    background: rgb(72, 66, 131);
+}
+
+.about img{
+    position: absolute;
+}
+
+.about-content{
+    display: flex;
+    flex-direction: row;
+    height: 579px;
+}
+
+.about-content-tab1 h3{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.about-content-tab1 p{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.line-about{
+    display: flex;
+    align-items: center;
+}
+
+.line-about div{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.line-about img{
+    right: 200px;
+}
+
+.about-content-tab1{
+    position: relative;
+    padding-top: 180px;
+    padding-right: 95px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-content-tab1 .line-about{
+    padding-left: 296px;
+}
+
+.quiz{
+    width: 100%;
+    height: 658px;
+    border-radius: 4px;
+    background: rgb(255, 244, 238);
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item img{
+    max-width: 280px;
+    max-height: 120px;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.column{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    padding-left: 100px;
+}
+
+.quiz h3{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-left: 100px;
+    margin-top: 30px !important;
+}
+
+
+.quiz p{
+    color: rgb(128, 128, 128);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-left: 100px;
+}
+
+.line{
+    width: 980px;
+    border: 1px solid rgb(128, 128, 128);
+    position: relative;
+    left: 100px;
+}
+
+.quiz h2{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-left: 100px;
+}
+
+.about-size{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    padding-left: 100px;
+}
+
+.img-quiz{
+    position: relative;
+    padding-left: 100px;
+}
+
+.list{
+    color: rgb(128, 128, 128);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.quiz-txt{
+    padding: 20px 20px 210px 20px;
+    left: 100px;
+    border-radius: 4px;
+    border: none;
+    position: relative;
+    background: rgb(255, 255, 255);
+    color: rgb(219, 187, 169);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    max-width: 465px;
+}
+
+.quiz-final h2{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-top: 40px !important;
+}
+
+.quiz-final p{
+    color: rgb(219, 187, 169);
+    font-family: "Intro Book", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.line3{
+    width: 980px;
+    border: 1px solid rgb(219, 187, 169);
+    position: relative;
+    left: 100px;
+}
+
+.tender{
+    display: flex;
+    flex-direction: row;
+    left: 100px;
+    position: relative;
+}
+
+.tender-col1{
+    padding: 40px;
+    width: 655px;
+    border-radius: 4px;
+    background: rgb(219, 187, 169);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.tender-col1 h3{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-top: 0px !important;
+}
+
+.tender-col1 p{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Book", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-left: 0 !important;
+}
+
+.tender-col1 .tender-txt{
+    padding: 20px;
+    width: 500px;
+    border-radius: 4px;
+    border: none;
+    background: rgb(255, 255, 255);
+    color: rgb(178, 181, 187);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.tender-col1 .tender-btn{
+    border-radius: 4px;
+    background: rgb(241, 79, 79);
+    border: none;
+    padding: 23px 74px 23px 74px;
+    color: rgb(255, 255, 255);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    width: 220px;
+}
+
+.tender-col2{
+    width: 205px;
+    height: 411px;
+    background-image: url(content/Devices\ _\ Apple\ _\ iPhone\ 11\ Pro.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tender-screen{
+    background-image: url(content/отпр.svg);
+    width: 205px;
+    height: 411px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 86%;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.tender-screen.show {
+    opacity: 1;
+}
+
+.line-third{
+    top: 100px;
+    position: relative;
+}
+
+.bal-third{
+    position: relative;
+    top: 100px;
+}
+
+.btn-and-list input{
+    box-sizing: border-box;
+    border: 1px solid rgb(68, 75, 88);
+    border-radius: 4px;
+    background: rgba(196, 196, 196, 0);
+    padding: 22px 42px 22px 42px;
+    color: rgb(68, 75, 88);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.btn-and-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 40px;
+}
+
+.quizz{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.team{
+    background: rgb(72, 66, 131);
+}
+
+.team img{
+    position: absolute;
+    right: 0;
+}
+
+.team-container{
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.h2team{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    padding-bottom: 36px;
+}
+
+.flex-container1{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.column1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.item1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item1 .img{
+    width: 380px;
+    height: 400px;
+    position: relative;
+    background-image: url(content/jack-irwin-djIR42oN7Js-unsplash\ 1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item1 .img2{
+    width: 380px;
+    height: 400px;
+    position: relative;
+    background-image: url(content/jack-irwin-djIR42oN7Js-unsplash\ 12.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item1 .img3{
+    width: 380px;
+    height: 400px;
+    position: relative;
+    background-image: url(content/jack-irwin-djIR42oN7Js-unsplash\ 13.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item1 .img4{
+    width: 380px;
+    height: 400px;
+    position: relative;
+    background-image: url(content/Mask\ Group3.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item1 .img5{
+    width: 380px;
+    height: 400px;
+    position: relative;
+    background-image: url(content/Mask\ Group4.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item1 .img6{
+    width: 380px;
+    height: 400px;
+    position: relative;
+    background-image: url(content/Mask\ Group5.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item1 h2{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    z-index: 11;
+}
+
+.item1 p{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.faq{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.faq h2{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+.contacts{
+    background: rgb(243, 247, 246);
+}
+
+.contacts-column1{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 400px;
+}
+
+.contacts-column1 h2{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.main-office span{
+    color: rgb(178, 181, 187);
+    font-family: "Intro Book", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 8%;
+    text-align: left;
+    padding-bottom: 30px;
+}
+
+.main-office h2{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.main-office div{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.sales p{
+    color: rgb(178, 181, 187);
+    font-family: "Intro Book", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 8%;
+    text-align: left;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+.sales h2{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.sales div{
+    color: rgb(68, 75, 88);
+    font-family: "Intro Book", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.contacts-container{
+    display: flex;
+    flex-direction: row;
+    gap: 140px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.contacts-column2{
+    max-width: 680px;
+}
+
+.soc{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.vk{
+    background-image: url(content/VK.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 45px;
+    height: 44px;
+}
+
+.inst{
+    background-image: url(content/Instagram.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 45px;
+    height: 44px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 4px;
+    background: rgb(72, 66, 131);
+    padding: 40px 20px 40px 20px;
+    width: 380px;
+}
+
+.form h2{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Bold", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form p{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name-form{
+    border: none;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: rgb(178, 181, 187);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.phone-form{
+    border: none;
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: rgb(178, 181, 187);
+    font-family: "Intro Book", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.btn-form{
+    border-radius: 4px;
+    border: none;
+    background: rgb(241, 79, 79);
+    padding: 22px 47px 22px 47px;
+    color: rgb(255, 255, 255);
+    font-family: "Intro Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    width: 100%;
+}
+
+.instagram{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.insta{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+footer{
+    background: rgb(68, 75, 88);
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer h3{
+    color: rgb(255, 255, 255);
+    font-family: "Intro", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.menu p a, .menu p{
+    color: rgb(255, 255, 255);
+    font-family: "Intro Book", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-decoration: none;
+}

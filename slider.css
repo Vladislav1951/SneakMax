@@ -1,0 +1,27 @@
+.noUi-target{
+    background-color: rgb(68, 75, 88);
+    border: none;
+    box-shadow: none;
+    height: 4px;
+}
+
+.noUi-connect{
+    background-color: rgb(68, 75, 88);
+}
+
+.noUi-handle{
+    box-shadow: none;
+    background-color: rgb(68, 75, 88);
+}
+
+.noUi-horizontal .noUi-handle{
+    width: 6px;
+    height: 20px;
+    top: -7px;
+    border: none;
+    right: 0.4px;
+}
+
+.noUi-horizontal .noUi-handle-lower{
+    right: -5.5px;
+}

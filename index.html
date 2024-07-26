@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1680">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nouislider/nouislider.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="accardeon.css">
+    <link rel="stylesheet" href="tooltip.css">
+    <title>SneakMax</title>
+</head>
+<body>
+    <header>
+        <div class="headerpad">
+        <div class="header">
+            <h3>SneakMax</h3>
+            <div class="par">
+                <p><a href="#catalog">Каталог</a></p>
+                <p><a href="#about">О нас</a></p>
+                <p><a href="#quiz">Подбор товаров</a></p>
+                <p><a href="#team">Наша команда</a></p>
+                <p><a>Доставка и оплата</a></p>
+                <p><a href="#contacts">Контакты</a></p>
+                <p class="cart-btn" id="regular-cart-btn" ss="cart-btn">Корзина <div class="cart-img"><img src="content/Vector.svg" alt="" srcset=""><span class="circle-blox"><div class="circle">0</div></span></div></p>
+            </div>
+            <div id="mymod-cart" class="modal-cart">
+                <div class="modal-cont-cart" style="display: flex;">
+                    <div class="row-cart1">
+                        <p style="display: block;">Пополните корзину!</p>
+                        </div>
+                    <div class="total-row2">
+                        <div class="price-total">
+                            <p>Итого:</p>
+                            <h3>0 ₽</h3>
+                        </div>
+                        <div class="btn-total">
+                            <input type="button" value="Перейти в корзину">
+                        </div>
+                    </div>
+                </div>
+                <div class="order" style="display: none;">
+                    <div class="order-first">
+                        <h3>Оформление заказа</h3>
+                        <p>Заказ 3456 67</p>
+                    </div>
+                    <div class="order-cart">
+                        <div class="order-items">Товаров в заказе:<span></span></div>
+                        <div class="order-price">Общая сумма заказа:<span></span></div>
+                        <p>Состав заказа</p>
+                    </div>
+                    <div class="order-inputs">
+                        <input type="text" placeholder="Ваше имя" name="" id="">
+                        <input type="text" placeholder="Номер телефона" name="" id="">
+                        <input type="text" placeholder="E-mail" name="" id="">
+                    </div>
+                    <input class="order-input" type="button" value="Оформить заказ">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <h1>SneakMax</h1>
+        </div>
+        <div class="headerund container">
+            <h3>Кроссовки известных брендов<br> 
+                с доставкой по России и СНГ</h3>
+            <p>Мы продаем кроссовки брендов Nike, Adidas, Puma, Reebok,<br> Converse и многие другие по низким ценам</p>
+            <input class="hub" type="button" value="Перейти к покупкам">
+        </div>
+    </header>
+    <main>
+        <h3 class="h3 container">Каталог</h3>
+        <div id="catalog" class="catalog container">
+            <div class="filters">
+                <h3>
+                    Подбор
+                    <br>по параметрам
+                </h3>
+                <p>Цена, руб</p>
+                <div class="inputs-fil">
+                    <input type="number" placeholder="от" name="" id="input0">
+                    <input type="number" placeholder="до" name="" id="input1">
+                </div>
+                <div class="slider" id="range-slider"></div>
+                <p>Пол</p>
+                <div class="gen">
+                    <div class="male">
+                        <label class="checkbox-label" for=""> <div>
+                            <input id="checkbox-1" class="checkbox-custom" name="checkbox-1" type="checkbox" checked>
+                            <label for="checkbox-1" class="checkbox-custom-label">мужской</label>
+                        </div>
+                        </label>
+                    </div>
+                    <div class="female">
+                        <div>
+                            <input id="checkbox-2" class="checkbox-custom" name="checkbox-1" type="checkbox">
+                            <label for="checkbox-2" class="checkbox-custom-label">женский</label>
+                        </div>
+                    </div>
+                </div>
+                <p>Размер</p>
+                <div class="size">
+                    <input type="button" value="35" class="num-of-size" data-size="35">
+                    <input type="button" value="36" class="num-of-size" data-size="36">
+                    <input type="button" value="37" class="num-of-size" data-size="37">
+                </div>
+                <div class="size">
+                    <input type="button" value="38" class="num-of-size" data-size="38">
+                    <input type="button" value="39" class="num-of-size" data-size="39">
+                    <input type="button" value="40" class="num-of-size" data-size="40">
+                </div>
+                <div class="size lastsize">
+                    <input type="button" value="41" class="num-of-size" data-size="41">
+                    <input type="button" value="42" class="num-of-size" data-size="42">
+                    <input type="button" value="43" class="num-of-size" data-size="43">
+                </div>
+                <input type="button" class="btn-dark" value="Применить" onclick="applyFilters()">
+                <div class="reset" onclick="resetFilters()">
+                    сбросить
+                </div>
+            </div>
+            <div class="sneakers">
+                <div class="sneakers-tab1 sneakers-tab">
+                    <div class="sneaker" data-price="11000" data-gender="male" data-size="42">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">11 000 ₽ </p>
+                    </div>
+                    <div class="sneaker" data-price="12000" data-gender="female" data-size="39">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">12 000 ₽ </p>
+                    </div>
+                    <div class="sneaker" data-price="8000" data-gender="male" data-size="42">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">8 000 ₽ </p>
+                    </div>
+                </div>
+                <div class="sneakers-tab2 sneakers-tab">
+                    <div class="sneaker" data-price="112000" data-gender="male" data-size="40">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">112 000 ₽ </p>
+                    </div>
+                    <div class="sneaker" data-price="112000" data-gender="female" data-size="40">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">112 000 ₽ </p>
+                    </div>
+                    <div class="sneaker" data-price="12000" data-gender="male" data-size="42">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">12 000 ₽ </p>
+                    </div>
+                </div>
+                <div class="sneakers-tab3 sneakers-tab">
+                    <div class="sneaker" data-price="19000" data-gender="male" data-size="41">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">19 000 ₽ </p>
+                    </div>
+                    <div class="sneaker" data-price="18000" data-gender="female" data-size="41">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">18 000 ₽ </p>
+                    </div>
+                    <div class="sneaker" data-price="22000" data-gender="male" data-size="40">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">22 000 ₽ </p>
+                    </div>
+                </div>
+                <div class="sneakers-tab4 sneakers-tab sneakers2">
+                    <div class="sneaker" data-price="11000" data-gender="male" data-size="42">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">11 000 ₽ </p>
+                    </div>
+                    <div class="sneaker" data-price="12000" data-gender="female" data-size="39">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">12 000 ₽ </p>
+                    </div>
+                    <div class="sneaker" data-price="8000" data-gender="male" data-size="39">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">8 000 ₽ </p>
+                    </div>
+                </div>
+                <div class="sneakers-tab5 sneakers-tab sneakers2">
+                    <div class="sneaker" data-price="112000" data-gender="male" data-size="40">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">112 000 ₽ </p>
+                    </div>
+                    <div class="sneaker" data-price="112000" data-gender="female" data-size="40">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">112 000 ₽ </p>
+                    </div>
+                    <div class="sneaker" data-price="12000" data-gender="male" data-size="42">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">12 000 ₽ </p>
+                    </div>
+                </div>
+                <div class="sneakers-tab6 sneakers-tab sneakers2">
+                    <div class="sneaker" data-price="19000" data-gender="male" data-size="41">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">19 000 ₽ </p>
+                    </div>
+                    <div class="sneaker" data-price="18000" data-gender="female" data-size="41">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">18 000 ₽ </p>
+                    </div>
+                    <div class="sneaker" data-price="22000" data-gender="male" data-size="40">
+                        <img src="content/image.svg" alt="" srcset="">
+                        <div class="lays">
+                            <div class="hov-btn">
+                                <img src="content/check.svg" alt="" srcset="" class="mybtn">
+                                <div class="modal mymod">
+                                    <div class="modal-cont">
+                                        <div class="colllumn">
+                                            <div class="roow">
+                                                <div class="div1">
+                                                    <div class="image-sn">
+                                                    </div>
+                                                    <div class="images-sn">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                        <img src="content/867bca0039568c805d55cbfde9f23808 17.svg" width="70px" height="75px" alt="" srcset="">
+                                                    </div>
+                                                </div>
+                                                <div class="div2">
+                                                    <div class="first-about">
+                                                        <div class="art">Артикул: 879876</div>
+                                                        <div class="nal">В наличии: <span>13 шт</span></div>
+                                                    </div>
+                                                    <div class="second-name">Женские кроссовки Puma Force 1 Shadow</div>
+                                                    <div class="third-stars">
+                                                        <img src="content/Frame 21.svg" alt="" srcset="">
+                                                    </div>
+                                                    <div class="fourth-choise">
+                                                        Выберите размер
+                                                    </div>
+                                                    <div class="fifth-size">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                        <input type="button" value="36">
+                                                    </div>
+                                                    <div class="sixth-price">
+                                                        <p>19 789 ₽ </p>
+                                                        <span>20 578 ₽</span>
+                                                    </div>
+                                                    <div class="seventh-btn">
+                                                        <input type="button" value="Заказать">
+                                                    </div>
+                                                    <div class="eight-ul">
+                                                        <ul>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Бесплатная доставка до двери</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Оплата заказа при получении</li>
+                                                            <li><img src="content/Vector11.svg" alt="" srcset="">Обмен в течении двух недель</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="roow1">
+                                                <div class="div4">
+                                                    <h3>Описание</h3>
+                                                    <p>Кроссовки Nike Blazer Mid '77 Vintage Suede с винтажной подошвой возрождают стиль баскетбольных моделей Nike прошлого, создавая впечатление, что они хранились в шкафу долгие годы. </p>
+                                                </div>
+                                                <div class="div5">
+                                                    <h3>Характеристики</h3>
+                                                    <ul>
+                                                        <li>Пол: Мужской</li>
+                                                        <li>Цвета: Разноцветный</li>
+                                                        <li>Состав: Кожа, текстиль, резина</li>
+                                                        <li>Страна: Вьетнам</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="content/add-to-cart.svg" alt="" srcset="">
+                            </div>
+                        </div>
+                        <p class="name">Кроссовки Nike Air Force 1 '07 QS</p>
+                        <p class="price">22 000 ₽ </p>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <input class="catalog-input container" type="button" id="showMoreButton" value="Показать еще">
+        <div id="about" class="about">
+            <img src="content/figure.svg" alt="" srcset="">
+            <div class="about-content container">
+                <div class="about-content-tab1">
+                    <h3>Пара слов о нас</h3>
+                    <p>Спорт держит нас в форме. Учит дисциплине<br> Объединяет нас. Через спорт мы можем<br> менять жизни. В том числе с помощью<br> воодушевляющих историй спортсменов. Чтобы<br> помочь тебе подняться и двигаться вперед. </p>
+                    <div class="line-about"><img src="content/Line 6.svg" alt="" srcset=""><div>SneakMax</div></div>
+                </div>
+                <div class="img-about">
+                    <img src="content/Mask Group.svg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+        <div id="quiz" class="quizz">
+        <div id="quiz1" style="display: flex;" class="quiz container">
+            <h3>Мы подберем идеальную пару для вас</h3>
+            <p>Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями </p>
+            <div class="line"></div>
+            <h2>Какой тип кроссовок рассматриваете?</h2>
+            <div class="flex-container">
+                <div class="column">
+            <div class="item">
+                <img src="content/sneaker.svg" alt="" srcset="">
+                <label class="checkbox-label" for=""> <div>
+                    <input id="checkbox-8" class="checkbox-custom" name="checkbox-2" type="checkbox" checked>
+                    <label for="checkbox-8" class="checkbox-custom-label">мужской</label>
+                </div>
+                </label>
+            </div>
+            <div class="item">
+                <img src="content/sneaker.svg" alt="" srcset="">
+                <label class="checkbox-label" for=""> <div>
+                    <input id="checkbox-7" class="checkbox-custom" name="checkbox-2" type="checkbox" checked>
+                    <label for="checkbox-7" class="checkbox-custom-label">мужской</label>
+                </div>
+                </label>
+            </div>
+            <div class="item">
+                <img src="content/sneaker.svg" alt="" srcset="">
+                <label class="checkbox-label" for=""> <div>
+                    <input id="checkbox-3" class="checkbox-custom" name="checkbox-2" type="checkbox" checked>
+                    <label for="checkbox-3" class="checkbox-custom-label">мужской</label>
+                </div>
+                </label>
+            </div>
+            </div>
+            <div class="column">
+        <div class="item">
+            <img src="content/sneaker.svg" alt="" srcset="">
+            <label class="checkbox-label" for=""> <div>
+                <input id="checkbox-4" class="checkbox-custom" name="checkbox-2" type="checkbox" checked>
+                <label for="checkbox-4" class="checkbox-custom-label">мужской</label>
+            </div>
+            </label>
+        </div>
+        <div class="item">
+            <img src="content/sneaker.svg" alt="" srcset="">
+            <label class="checkbox-label" for=""> <div>
+                <input id="checkbox-5" class="checkbox-custom" name="checkbox-2" type="checkbox" checked>
+                <label for="checkbox-5" class="checkbox-custom-label">мужской</label>
+            </div>
+            </label>
+        </div>
+        <div class="item">
+            <img src="content/sneaker.svg" alt="" srcset="">
+            <label class="checkbox-label" for=""> <div>
+                <input id="checkbox-6" class="checkbox-custom" name="checkbox-2" type="checkbox" checked>
+                <label for="checkbox-6" class="checkbox-custom-label">мужской</label>
+            </div>
+            </label>
+        </div>
+        </div>
+        <div class="line"></div>
+        <div class="btn-and-list">
+            <div class="list">1 из 3</div>
+            <input type="button" value="Следующий шаг" id="next1">
+        </div>
+        </div>
+    </div>
+    <div id="quiz2" style="display: none;" class="quiz container">
+        <h3>Мы подберем идеальную пару для вас</h3>
+        <p>Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями </p>
+        <div class="line"></div>
+        <h2>Какой размер вам подойдет?</h2>
+        <div class="about-size">
+            <label class="checkbox-label" for=""> <div>
+                <input id="checkbox-9" class="checkbox-custom" name="checkbox-3" type="checkbox" checked>
+                <label for="checkbox-9" class="checkbox-custom-label">менее 36</label>
+            </div>
+            </label>
+            <label class="checkbox-label" for=""> <div>
+                <input id="checkbox-10" class="checkbox-custom" name="checkbox-3" type="checkbox" checked>
+                <label for="checkbox-10" class="checkbox-custom-label">36-38</label>
+            </div>
+            </label>
+            <label class="checkbox-label" for=""> <div>
+                <input id="checkbox-11" class="checkbox-custom" name="checkbox-3" type="checkbox" checked>
+                <label for="checkbox-11" class="checkbox-custom-label">39-41</label>
+            </div>
+            </label>
+            <label class="checkbox-label" for=""> <div>
+                <input id="checkbox-12" class="checkbox-custom" name="checkbox-3" type="checkbox" checked>
+                <label for="checkbox-12" class="checkbox-custom-label">42-44</label>
+            </div>
+            </label>
+            <label class="checkbox-label" for=""> <div>
+                <input id="checkbox-13" class="checkbox-custom" name="checkbox-3" type="checkbox" checked>
+                <label for="checkbox-13" class="checkbox-custom-label">45 и больше</label>
+            </div>
+            </label>
+        </div>
+        <img src="content/Rectangle 45.svg" alt="" srcset="" width="980px" height="282px" class="img-quiz">
+        <div class="line"></div>
+        <div class="btn-and-list">
+            <div class="list">2 из 3</div>
+            <input type="button" value="Следующий шаг" id="next2">
+        </div>
+    </div>
+    <div id="quiz3" style="display: none;" class="quiz container">
+        <h3>Мы подберем идеальную пару для вас</h3>
+        <p>Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями </p>
+        <div class="line"></div>
+        <h2>Уточните какие-либо моменты</h2>
+        <input type="text" class="quiz-txt" id="" placeholder="Введите сообщение">
+        <div class="line line-third"></div>
+        <div class="btn-and-list bal-third">
+            <div class="list">3 из 3</div>
+            <input type="button" value="Следующий шаг" id="next3">
+        </div>
+    </div>
+    <div id="quiz4" style="display: none;" class="quiz container quiz-final">
+        <h2>Ваша подборка готова!</h2>
+        <p>Оставьте свои контактные данные, чтобы бы мы могли отправить  подготовленный для вас каталог</p>
+        <div class="line3"></div>
+        <div class="tender">
+            <div class="tender-col1">
+                <h3>Получить предложение</h3>
+                <p>Получите подборку подходящих для вас моделей на почту</p>
+                <input type="text" class="tender-txt" name="" placeholder="Ваше имя" id="">
+                <input type="text" class="tender-txt" name="" placeholder="E-mail" id="">
+                <input class="tender-btn" type="button" value="Получить" id="getOfferButton">
+            </div>
+            <div class="tender-col2">
+                <div class="tender-screen" id="tenderScreen">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="team" class="team">
+        <img src="content/Group 72.svg" alt="" srcset="">
+        <div class="team-container container">
+            <h2 class="h2team">Наша команда</h2>
+            <div class="flex-container1">
+                <div class="column1">
+                    <div class="item1">
+                        <div class="img"></div>
+                        <h2>Максим Золотарев</h2>
+                        <p>Администратор</p>
+                    </div>
+                    <div class="item1">
+                        <div class="img2"></div>
+                        <h2>Максим Золотарев</h2>
+                        <p>Администратор</p>
+                    </div>
+                    <div class="item1">
+                        <div class="img3"></div>
+                        <h2>Максим Золотарев</h2>
+                        <p>Администратор</p>
+                    </div>
+                </div>
+                <div class="column1">
+                    <div class="item1">
+                        <div class="img4"></div>
+                        <h2>Максим Золотарев</h2>
+                        <p>Администратор</p>
+                    </div>
+                    <div class="item1">
+                        <div class="img5"></div>
+                        <h2>Максим Золотарев</h2>
+                        <p>Администратор</p>
+                    </div>
+                    <div class="item1">
+                        <div class="img6"></div>
+                        <h2>Максим Золотарев</h2>
+                        <p>Администратор</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="faq container">
+        <h2>Часто задаваемые вопросы</h2>
+        <div class="accardion">
+            <div class="line1"></div>
+            <div class="accardion-block">
+                <div class="accardion-link active">
+                    <a href="javascript:void(0);">
+                        Вопрос 1
+                    </a>
+                  </div>
+                  <div class="accardion-lists active-block">
+                    <p>
+                        А это ответ 1: в комплексе функционируют 6 детских садов с площадками, воспитателями и всякими другими людьми
+                    </p>
+                </div>
+            </div>
+            <div class="line1"></div>
+            <div class="accardion-block">
+                <div class="accardion-link">
+                    <a href="javascript:void(0);">Вопрос 2</a>
+                </div>
+                <div class="accardion-lists">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum asperiores unde id blanditiis quia, odit porro cumque perferendis? Autem pariatur aliquid quia ab doloremque fugiat corporis sit ut totam?</p>
+                </div>
+            </div>
+            <div class="line1"></div>
+          </div>
+    </div>
+    <div id="contacts" class="contacts">
+        <div class="contacts-container container">
+            <div class="contacts-column1">
+                <h2>
+                    Контакты
+                </h2>
+                <div class="main-office">
+                    <span>ГЛАВНЫЙ ОФИС
+                        <ul class="wrapper">
+                        <li class="icon tool">
+                          <div class="tooltip">Адрес и телефон для корреспонденции, инвесторов. 
+                             Вопросы о доставке, качестве обслуживания и товара
+                              просьба задавать в отдел продаж</div>
+                          <span><i class="fab"></i></span>
+                        </li>
+                        </ul>
+                    </span>
+                        <h2>+7 800 789 89 89</h2>
+                        <div>г. Санкт-Петербург, Комсомольская, 43 к1</div>
+                </div>
+                <div class="sales">
+                    <p>отдел продаж</p>
+                        <h2>+7 800 789 89 89</h2>
+                        <div>г. Санкт-Петербург, Комсомольская, 43 к1</div>
+                </div>
+                <div class="soc">
+                    <div class="vk"></div>
+                    <div class="inst"></div>
+                </div>
+            </div>
+            <div class="contacts-column2">
+                <div style="position:relative;overflow:hidden;width:680px;height:500px;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/2_ya_komsomolskaya_ulitsa_43/Z0kYdwNiSEAFQFtjfXRycXhqbQ==/services/?ll=30.218658%2C59.836150&tab=services&utm_medium=mapframe&utm_source=maps&z=10.56" style="color:#eee;font-size:12px;position:absolute;top:14px;border:none;">2-я Комсомольская улица, 43 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=30.218658%2C59.836150&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQwOTcwNBJb0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMi3RjyDQmtC-0LzRgdC-0LzQvtC70YzRgdC60LDRjyDRg9C70LjRhtCwLCA0MyIKDR8j8UEVblJvQg%2C%2C&tab=services&z=10.56" width="680px" height="500px" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>            </div>
+        </div>
+    </div>
+    <div class="insta container">
+        <div class="form">
+            <h2>Есть вопросы?</h2>
+            <p>Заполните форму и наш <br> менеджер свяжется с вами</p>
+            <div class="forms">
+            <input class="name-form" type="text" placeholder="ваше имя" id="">
+            <input class="phone-form" type="text" placeholder="номер телефона" id="">
+            <input class="btn-form" type="button" value="Отправить">
+            </div>
+        </div>
+        <div class="instagram">
+            <img src="content/1024px-Instagram_logo 1.svg" alt="" srcset="">
+            <img src="content/Group 61.svg" alt="" srcset="">
+        </div>
+    </div>
+    </main>
+    <footer>
+        <div class="footer container">
+            <h3>SneakMax</h3>
+            <div class="menu">
+                <p><a href="#catalog">Каталог</a></p>
+                <p><a href="#about">О нас</a></p>
+                <p><a href="#quiz">Подбор товаров</a></p>
+                <p><a href="#team">Наша команда</a></p>
+                <p><a href="">Доставка и оплата</a></p>
+                <p><a href="#contacts">Контакты</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+    <script src="app.js"></script>
+    <script src="nouislider/nouislider.js"></script>
+    <script src="slider.js"></script>
+    <script src="accardeon.js"></script>
+</body>
+</html>
